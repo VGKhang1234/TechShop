@@ -131,15 +131,7 @@ Khi chỉ cần chạy bản tài nguyên đã biên dịch, có thể bỏ qua 
 Cấu Trúc Dự Án
 ```
 Mobile Phone shop/
-├── README.md
-├── PROJECT-STRUCTURE.md
-├── css/                         # CSS giao diện cũ ở cấp repository
-├── database/                    # Thư mục cũ ở cấp repository
-├── img/                         # Ảnh cũ/ảnh dùng lại; bản Laravel nằm trong public/img
-├── js/                          # JavaScript giao diện cũ ở cấp repository
-├── public/                      # Thư mục cũ ở cấp repository
-├── index.php                    # Dispatcher PHP cũ, không phải entry point Laravel
-└── laravel-app/                 # Ứng dụng Laravel chính
+└── laravel-app/                 # Ứng dụng Laravel chínhPHP cũ, không phải entry point Laravel
     ├── app/
     │   ├── Http/Controllers/
     │   │   └── Admin/           # Controller cho trang quản trị
