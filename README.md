@@ -128,6 +128,47 @@ Truy cập `http://127.0.0.1:8000`. Đăng nhập quản trị tại `http://127
 
 Khi chỉ cần chạy bản tài nguyên đã biên dịch, có thể bỏ qua `npm run dev`; chạy `npm run build` lại sau khi sửa JavaScript/CSS. Với triển khai production, cấu hình web server trỏ document root đến thư mục `public`, đặt `APP_ENV=production`, `APP_DEBUG=false`, `APP_URL` thành domain HTTPS thực tế và cấp quyền ghi cho `storage` cùng `bootstrap/cache`.
 
+Cấu Trúc Dự Án
+
+laravel-app/                 # Ứng dụng Laravel chính
+    ├── app/
+    │   ├── Http/Controllers/
+    │   │   └── Admin/           # Controller cho trang quản trị
+    │   ├── Models/              # Eloquent models
+    │   ├── Providers/            # Service providers
+    │   └── Services/             # Logic nghiệp vụ dùng chung
+    ├── bootstrap/                # Khởi tạo ứng dụng và middleware
+    ├── config/                   # Cấu hình Laravel
+    ├── database/
+    │   ├── factories/
+    │   ├── migrations/
+    │   ├── seeders/
+    │   ├── database.sqlite       # Database SQLite cục bộ
+    │   └── etech_store.sql       # Schema và dữ liệu mẫu MySQL
+    ├── docs/                     # Tài liệu API và collection Postman
+    ├── public/                   # Document root và tài nguyên công khai
+    │   ├── build/                # Tài nguyên được biên dịch bởi Vite
+    │   ├── css/
+    │   ├── img/
+    │   ├── js/
+    │   └── index.php             # Entry point HTTP của Laravel
+    ├── resources/
+    │   ├── css/                  # CSS nguồn được xử lý bởi Vite
+    │   ├── js/                   # JavaScript nguồn
+    │   └── views/                # Blade templates: store, auth, admin, layouts
+    ├── routes/
+    │   ├── web.php               # Route giao diện cửa hàng và quản trị
+    │   └── console.php           # Console routes
+    ├── storage/                  # Log, cache, session và file runtime
+    ├── tests/
+    │   ├── Feature/
+    │   └── Unit/
+    ├── .env.example
+    ├── artisan
+    ├── composer.json
+    ├── package.json
+    └── vite.config.js
+
 ## Hướng dẫn sử dụng
 
 ### Khách hàng
